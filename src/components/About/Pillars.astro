@@ -1,0 +1,101 @@
+---
+import Container from "../Container.astro";
+
+// Define the pillar data to keep the template clean
+const pillars = [
+  {
+    title: "Quietude",
+    desc: "A commitment to auditory and visual silence, allowing for deep contemplation and rest.",
+    svgPath: "M12 2C8 2 5 5 5 9c0 4 3 7 7 7s7-3 7-7c0-4-3-7-7-7zM7 9a5 5 0 0 1 5-5 5 5 0 0 1 5 5c0 2.76-2.24 5-5 5S7 11.76 7 9z"
+  },
+  {
+    title: "Intentionality",
+    desc: "Every angle, texture, and light source is placed with mathematical and artistic purpose.",
+    svgPath: "M12 2L9 7h6L12 2zM12 7v13M9 17h6"
+  },
+  {
+    title: "Biophilia",
+    desc: "Integrating organic elements and native flora into the living heart of our architecture.",
+    svgPath: "M17 3c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8z"
+  },
+  {
+    title: "Discretion",
+    desc: "Service that is invisible yet omnipresent, anticipating needs before they are voiced.",
+    svgPath: "M17 12l-5-5-5 5M12 7v11M19 14H5"
+  }
+];
+
+
+const offsets = [
+  "mt-0",  
+  "mt-10", 
+  "mt-0",     
+  "mt-16"      
+];
+---
+
+
+<section class="py-16 sm:py-20 md:py-24 bg-[#FAF9F7]">
+  <Container>
+
+    <!-- Header -->
+    <div class="mb-16 md:mb-20">
+      <p class="text-xs sm:text-sm uppercase tracking-[0.2em] text-emerald-800 font-medium mb-4">
+        The Foundation
+      </p>
+
+      <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6 md:gap-10">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-emerald-950 max-w-lg leading-tight">
+          The Four Pillars of ALAK
+        </h2>
+
+        <p class="text-emerald-900/80 max-w-md text-base sm:text-lg leading-relaxed md:pt-2">
+          Our philosophy is built upon four non-negotiable principles that define every interaction.
+        </p>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+
+      {pillars.map((pillar, index) => (
+        <div class={`bg-white rounded-xl p-6 sm:p-7 md:p-8 shadow-sm hover:shadow-md transition-all duration-300 ${offsets[index] || ''}`}>
+
+          <!-- Icon -->
+          <div class="mb-5 flex items-center justify-center w-12 h-12 rounded-full bg-emerald-50 text-emerald-900">
+            <svg 
+              viewBox="0 0 24 24" 
+              class="w-6 h-6"
+              fill="none" 
+              stroke="currentColor" 
+              stroke-width="1.5" 
+              stroke-linecap="round" 
+              stroke-linejoin="round"
+            >
+              <path d={pillar.svgPath} />
+            </svg>
+          </div>
+
+          <!-- Title -->
+          <h3 class="text-xl sm:text-2xl font-serif text-emerald-950 mb-3">
+            {pillar.title}
+          </h3>
+
+          <!-- Description -->
+          <p class="text-emerald-900/80 leading-relaxed text-sm sm:text-base">
+            {pillar.desc}
+          </p>
+
+        </div>
+      ))}
+
+    </div>
+
+  </Container>
+</section>
+
+<style>
+  h2, h3 {
+    font-family: 'Georgia', serif;
+  }
+</style>

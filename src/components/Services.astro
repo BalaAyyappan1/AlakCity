@@ -1,0 +1,93 @@
+---
+import { Image } from 'astro:assets';
+import { BarImage, DeskImage, EmberRoommage, GatherImage, HeritageImage } from '../assets/services';
+import Container from './Container.astro';
+---
+
+
+<section class="md:mt-40 mt-20">
+    <Container>
+
+      <p class="text-xs sm:text-sm uppercase tracking-[0.2em] text-emerald-800 font-medium mb-4">
+        OUR EXPERTISE
+      </p>
+
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-10">
+        <h2 class="text-3xl sm:text-4xl md:text-7xl font-serif text-emerald-950 max-w-lg leading-[100%]">
+          Curated <br />
+Sanctuary<br />
+for the Soul.
+        </h2>
+
+        <p class="text-emerald-900/80 max-w-md text-base sm:text-lg leading-relaxed md:pt-2">
+In the heart of the city, we have crafted an oasis
+where time slows down. Every service is a
+dialogue between intentionality and your well-
+being.
+        </p>
+      </div>
+
+        
+    </Container>
+</section>
+
+<section class="text-[#d0d9d3] py-20  py-20">
+    <Container>
+
+  <div class="max-w-[1400px] mx-auto space-y-6">
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <div class="relative group overflow-hidden rounded-sm aspect-[16/9] md:aspect-auto md:h-[500px] md:col-span-2">
+        <Image src={HeritageImage} alt="Modern suite opening to a lush courtyard" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-8 flex flex-col justify-end">
+          <span class="absolute top-6 right-6 text-[10px] uppercase tracking-[0.2em] text-white/70 border border-white/20 px-3 py-1 rounded-full font-medium">Signature</span>
+          <h3 class="text-3xl md:text-4xl font-serif text-white mb-2">Heritage Suites</h3>
+          <p class="text-sm text-white/80 max-w-sm">Private retreats designed with limestone, silk, and silence.</p>
+        </div>
+      </div>
+
+      <div class="relative group overflow-hidden rounded-sm aspect-[4/5] md:aspect-auto md:h-[500px] md:col-span-1">
+        <Image src={EmberRoommage} alt="Fine dining table set with candelabra" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-black/40 p-8 flex flex-col justify-end text-center items-center">
+          <h3 class="text-2xl md:text-3xl font-serif text-white italic mb-2">The Ember Room</h3>
+          <p class="text-[10px] uppercase tracking-[0.3em] text-white/90 font-medium">Culinary Artistry</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 items-start mt-6">
+      
+      <div class="relative aspect-[3/4] rounded-sm overflow-hidden flex items-center justify-center">
+        <Image src={BarImage} alt="Warm spa interior with wooden slatted walls" class="w-full h-full object-cover absolute inset-0" />
+        <div class="relative z-10 bg-[#fdfaf5]/90 p-10 text-center rounded-sm max-w-[85%] border border-[#f3e9dc]">
+          <h3 class="text-2xl font-serif text-[#1e3a34] mb-4">Immersion bar</h3>
+          <p class="text-sm text-[#1e3a34]/80 leading-relaxed mb-6">Hydrotherapy and botanical rituals for deep restoration.</p>
+          <div class="flex justify-center text-[#1e3a34]">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2C8 2 5 5 5 9c0 4 3 7 7 7s7-3 7-7c0-4-3-7-7-7zM7 9a5 5 0 0 1 5-5 5 5 0 0 1 5 5c0 2.76-2.24 5-5 5S7 11.76 7 9z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="">
+        <div class="aspect-[1/1] rounded-sm overflow-hidden grayscale">
+          <Image src={GatherImage} alt="Elegant monochrome banquet hall set for a large event" class="w-full h-full object-cover" />
+        </div>
+        <h3 class="text-xl font-serif text-primary mt-4 mb-2">Curated Gatherings</h3>
+        <p class="text-sm  max-w-xs text-black/90">From intimate salons to grand celebrations, executed with precision.</p>
+      </div>
+
+      <div class="">
+        <div class="aspect-[4/3] rounded-sm overflow-hidden">
+          <Image src={DeskImage} alt="Concierge standing behind a polished gold and wood reception desk" class="w-full h-full object-cover" />
+        </div>
+        <h3 class="text-xl heading-italic text-primary mt-4 mb-2">The Alak Desk</h3>
+        <p class="text-sm  max-w-xs text-black/90">24/7 personal stewardship to navigate the city's hidden gems.</p>
+        
+      </div>
+    </div>
+  </div>
+    </Container>
+</section>

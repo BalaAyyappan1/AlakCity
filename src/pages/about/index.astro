@@ -1,22 +1,13 @@
 ---
+import Hero from "../../components/About/Hero.astro";
+import Philosophy from "../../components/About/Philosophy.astro";
+import Pillars from "../../components/About/Pillars.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="About | Alak City">
-  <section class="page-section">
-    <h1>About Us</h1>
-    <p>Learn more about Alak City and our story.</p>
-  </section>
+<Hero />
+<Pillars />
+<Philosophy />
 </Layout>
 
-<style>
-  .page-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 4rem 1.5rem;
-  }
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-</style>

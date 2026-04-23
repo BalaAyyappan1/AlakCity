@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets";
+import Container from "../Container.astro";
+import { AboutHero } from "../../assets/about";
+---
+
+
+<section>
+<section class="w-full h-screen flex items-center bg-white pt-15">
+
+  <Container>
+    <div class="grid grid-cols-1 md:grid-cols-2 items-center ">
+
+      <!-- LEFT: TEXT -->
+      <div class=" max-w-xl">
+        <h1 class="uppercase text-[12px] mb-2 tracking-wider">OUR ORIGIN</h1>
+        <h1 class="text-4xl text-primary sm:text-5xl md:text-7xl lg:text-[80px] heading-italic leading-[100%] mb-4">
+          The Story of <br />
+          Atelier.
+        </h1>
+
+        <p class="text-base sm:text-lg text-[#404943]">
+          ALAK CITY began as a vision to harmonize the raw elegance of
+          nature with the refined precision of modern architecture.
+          A sanctuary designed for the deliberate traveler.
+        </p>
+      </div>
+
+      <!-- RIGHT: IMAGE -->
+      <div class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[500px]">
+        <Image
+          src={AboutHero}
+          alt="Alak City Hotel"
+          class="w-full h-full object-cover rounded-xl"
+          loading="eager"
+        />
+      </div>
+
+    </div>
+  </Container>
+
+
+
+
+</section>
+
+<section class="bg-[#F4F3F1] py-16 sm:py-20 md:py-28 flex flex-col items-center justify-center text-center px-6">
+
+  <h2 class="text-sm sm:text-base text-primary tracking-[0.2em] uppercase mb-8">
+    Our Mission
+  </h2>
+
+  <p class="heading-italic text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-5xl text-[#1A1C1B]">
+    “To curate an environment where time slows down, and the human spirit is
+    restored through the intentionality of space and service.”
+  </p>
+
+</section>
+</section>

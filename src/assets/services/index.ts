@@ -1,0 +1,5 @@
+export { default as HeritageImage} from './heri.png'
+export { default as EmberRoommage} from './rooms.png' 
+export { default as BarImage} from './bar.png' 
+export { default as GatherImage} from './gather.png' 
+export { default as DeskImage} from './desk.png' 

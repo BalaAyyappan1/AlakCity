@@ -1,0 +1,79 @@
+---
+import { Image } from "astro:assets";
+import { PhilosophyImage } from "../../assets/about";
+import Container from "../Container.astro";
+ 
+---
+
+
+
+
+<section class="bg-[#0b2923] text-[#f0f4f2] py-20">
+    <Container>
+          <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+    
+    <div class="w-full aspect-[4/2] bg-[#1a3832] rounded-sm overflow-hidden flex items-center justify-center border border-[#1a3832]">
+    <Image src={PhilosophyImage} alt="" class='w-full' />  
+    </div>
+
+    <div class="flex flex-col gap-8">
+      <span class="text-xs uppercase tracking-[0.2em] text-[#8ea6a1] font-medium">
+        The Philosophy
+      </span>
+
+      <blockquote class="text-3xl md:text-5xl font-serif leading-tight">
+        "We do not build rooms; we create vessels for experiences that resonate long after the stay."
+      </blockquote>
+
+      <div class="flex items-center gap-4">
+        <div class="h-px w-10 bg-[#8ea6a1]"></div>
+        <span class="text-sm uppercase tracking-widest text-[#8ea6a1] font-medium">
+          xxx, Founder
+        </span>
+      </div>
+    </div>
+
+  </div>
+    </Container>
+
+</section>
+
+
+<section class=" text-white py-16 sm:py-20 md:py-24">
+
+    <Container>
+
+  <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
+
+    <!-- Heading -->
+    <h1 class="heading-italic text-primary text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
+      Join the Sanctuary.
+    </h1>
+
+    <!-- Description -->
+    <p class="text-black/90 text-base sm:text-lg md:text-xl max-w-2xl mb-8 leading-relaxed">
+      Experience the Alak City philosophy firsthand. We invite you to discover
+      our curated spaces.
+    </p>
+
+    <!-- CTA Button -->
+    <a 
+      href="#"
+      class="inline-block px-6 sm:px-8 py-3 text-sm sm:text-base font-medium tracking-wide border border-white/20 bg-primary rounded-full hover:border-white hover:bg-white hover:text-black transition-all duration-300"
+    >
+      Explore our rooms →
+    </a>
+
+  </div>
+
+    </Container>
+
+
+</section>
+
+<style>
+  /* Ensuring a classic serif look for the quote */
+  blockquote {
+    font-family: 'Georgia', serif;
+  }
+</style>
