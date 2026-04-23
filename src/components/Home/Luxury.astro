@@ -1,0 +1,35 @@
+---
+import {  Heart, LuxuryImage } from "../../assets/home";
+import { Image } from "astro:assets";
+---
+
+
+
+<section class="relative h-[70vh] w-full overflow-hidden flex items-center justify-center mt-20">
+  
+  <Image
+    src={LuxuryImage}
+    alt="Alak City Hotel hero background"
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+
+  <div class="absolute inset-0 bg-black/40"></div>
+
+  <div class="relative z-10 w-full p-6 text-center text-white flex flex-col items-center justify-center gap-6">
+
+    <Image
+      src={Heart}
+      alt="Heart Icon"
+      class="w-10"
+    />
+
+    <h1 class="max-w-4xl text-3xl sm:text-5xl md:text-[48px] heading-italic leading-[1.2] md:leading-[48px]">
+      "Luxury is not the presence of noise, but the intentionality of silence and the perfection of every detail."
+    </h1>
+
+    <p class="text-base md:text-xs text-[#FFDEA5] tracking-widest opacity-90 md:mt-20 mt-5 uppercase">
+      THE CURATOR'S PHILOSOPHY
+    </p>
+
+  </div>
+</section>

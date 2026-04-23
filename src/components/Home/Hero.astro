@@ -1,0 +1,55 @@
+---
+import { heroImage } from "../../assets/home";
+import { Image } from "astro:assets";
+import Container from "../Container.astro";
+---
+
+
+
+<section class="relative h-screen flex items-center">
+  
+  <!-- Background -->
+  <Image
+    src={heroImage}
+    alt="Alak City Hotel hero background"
+    class="absolute inset-0 w-full h-full "
+    loading="eager"
+  />
+    <!-- Overlay (optional for better text visibility) -->
+  <div class="absolute inset-0 bg-black/30"></div>
+<Container>
+    <!-- Content -->
+  <div class="relative z-10 w-full ">
+    
+    <div class="max-w-xl text-left text-white">
+      
+      <h1 class="text-4xl sm:text-5xl md:text-[88px] heading-italic leading-tight mb-3">
+        Experience <br />
+        Refined Luxury
+      </h1>
+
+      <p class="text-base sm:text-md md:text-lg text-gray-200 mb-5">
+        A curated sanctuary where heritage meets modern elegance.
+        Discover the art of sophisticated living in the heart of the city.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="/rooms" class="bg-white text-black px-6 sm:px-8 py-3 rounded font-semibold hover:bg-gray-100 transition text-center">
+          Explore Accommodations
+        </a>
+
+        <a href="/contact" class="border border-white text-white px-6 sm:px-8 py-3 rounded font-semibold hover:bg-white hover:text-black transition text-center">
+          Plan Your Event
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</Container>
+
+
+
+
+
+</section>

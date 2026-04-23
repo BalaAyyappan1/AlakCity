@@ -1,1 +1,68 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-serif: "LiberationSerif", Georgia, serif;
+  --color-primary: #002F1F;
+}
+
+@font-face {
+  font-family: "LiberationSerif";
+  src: url("/fonts/LiberationSerif-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LiberationSerif";
+  src: url("/fonts/LiberationSerif-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LiberationSerif";
+  src: url("/fonts/LiberationSerif-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LiberationSerif";
+  src: url("/fonts/LiberationSerif-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+html {
+  font-family: "Manrope", system-ui, sans-serif;
+}
+
+
+.heading-italic {
+  font-family: "LiberationSerif", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.heading-bold {
+  font-family: "LiberationSerif", Georgia, serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.heading-regular {
+  font-family: "LiberationSerif", Georgia, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.heading-bold-italic {
+  font-family: "LiberationSerif", Georgia, serif;
+  font-style: italic;
+  font-weight: 700;
+}
