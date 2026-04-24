@@ -2,14 +2,15 @@
 import { Image } from "astro:assets";
 import Container from "../Container.astro";
 import { AboutHero } from "../../assets/about";
+import { ContactHero } from "../../assets/home";
 ---
 
 
 <section>
-<section class="w-full h-screen flex items-center bg-white pt-15">
+<section class="w-full h-screen flex items-center bg-white md:pt-15 pt-20">
 
   <Container>
-    <div class="grid grid-cols-1 md:grid-cols-2 items-end ">
+    <div class="grid grid-cols-1 md:grid-cols-2 items-end  gap-10">
 
       <!-- LEFT: TEXT -->
       <div class=" max-w-xl">
@@ -26,9 +27,9 @@ into a world of curated luxury and quiet sophistication.
       </div>
 
       <!-- RIGHT: IMAGE -->
-      <div class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[500px]">
+      <div class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
         <Image
-          src={AboutHero}
+          src={ContactHero}
           alt="Alak City Hotel"
           class="w-full h-full object-cover rounded-xl"
           loading="eager"

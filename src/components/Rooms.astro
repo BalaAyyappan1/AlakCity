@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import Container from './Container.astro';
+import { Room1, Room2, Room3 } from '../assets/rooms';
 
 // You can add as many rooms as you want here
 const rooms = [
@@ -11,7 +12,7 @@ const rooms = [
     desc: "Elevated on the upper levels, the Deluxe Room features floor-to-ceiling glass, framing the city skyline as a living canvas. Experience acoustic perfection and curated amenities.",
     price: "₹2250",
     quote: "A spatial dialogue between modern heritage and future tranquility.",
-    image: null, // Replace with your image import
+    image: Room1,
   },
   {
     title: "Junior Suite",
@@ -20,7 +21,7 @@ const rooms = [
     desc: "Executive-style suite, the room of the new archiopatric views and curated spaces, making shared experiences and curatorial perfection.",
     price: "₹3800",
     quote: "Architecture as a canvas for shared experiences.",
-    image: null,
+    image: Room2,
   },
   {
     title: "Premier Studio",
@@ -29,11 +30,11 @@ const rooms = [
     desc: "Premier Studio minimalist studies, minimizing scoring, and created design and biophilic design with soundproofing and enconracs in a private balcony.",
     price: "₹2900",
     quote: "Restoration is not passive; it is a designed encounter.",
-    image: null,
+    image: Room3,
   }
 ];
 ---
-<section class="md:mt-40 mt-20 mb-20">
+<section class="md:mt-40 mt-30 mb-20">
   <Container>
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-10">
       <h2 class="text-3xl sm:text-4xl md:text-7xl font-serif text-emerald-950 max-w-lg leading-[100%]">
@@ -68,7 +69,7 @@ CITY is a curated retreat.
             </p>
             <div class="pt-4">
               <p class="text-2xl font-serif mb-6">{room.price} <span class="text-sm font-sans text-gray-500">PER NIGHT</span></p>
-              <button class="bg-[#0b2923] text-white px-8 py-4 uppercase tracking-[0.2em] text-xs font-bold hover:bg-[#1a4a40] transition-colors">
+              <button onclick="window.location.href='/contact#contact-form'" class="bg-[#0b2923] text-white px-8 py-4 uppercase tracking-[0.2em] text-xs font-bold hover:bg-[#1a4a40] transition-colors cursor-pointer">
                 Reserve your stay
               </button>
             </div>
@@ -77,9 +78,11 @@ CITY is a curated retreat.
           <div class="w-full md:w-1/2 relative">
             <div class="aspect-[4/3] w-full bg-gray-200 overflow-hidden">
                {/* Replace this div with your <Image /> component */}
-               <div class="w-full h-full bg-slate-300 flex items-center justify-center text-slate-500">
-                 Image Placeholder
-               </div>
+              <Image
+                src={room.image}
+                alt={room.name}
+                class="w-full h-full object-cover rounded-2xl"
+              />
             </div>
             
             <div class="absolute -bottom-6 -left-6 md:-left-10 md:bottom-10 bg-[#4a3f2b] p-8 max-w-[280px] shadow-xl">
