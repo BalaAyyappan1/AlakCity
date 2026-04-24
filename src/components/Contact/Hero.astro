@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import Container from "../Container.astro";
+import { AboutHero } from "../../assets/about";
+---
+
+
+<section>
+<section class="w-full h-screen flex items-center bg-white pt-15">
+
+  <Container>
+    <div class="grid grid-cols-1 md:grid-cols-2 items-end ">
+
+      <!-- LEFT: TEXT -->
+      <div class=" max-w-xl">
+
+        <h1 class="text-4xl text-primary sm:text-5xl md:text-7xl lg:text-[80px] heading-italic leading-[100%] tracking-tighter mb-4">
+          Your Sanctuary <br />
+          Awaits.
+        </h1>
+
+        <p class="text-base sm:text-lg text-[#404943]">
+        Reach out to our concierge team to begin your journey
+into a world of curated luxury and quiet sophistication.
+        </p>
+      </div>
+
+      <!-- RIGHT: IMAGE -->
+      <div class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[500px]">
+        <Image
+          src={AboutHero}
+          alt="Alak City Hotel"
+          class="w-full h-full object-cover rounded-xl"
+          loading="eager"
+        />
+      </div>
+
+    </div>
+  </Container>
+
+
+
+
+</section>
+
+
+</section>

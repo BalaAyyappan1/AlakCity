@@ -1,22 +1,12 @@
 ---
+
+import Forms from "../../components/Contact/Forms.astro";
+import Hero from "../../components/Contact/Hero.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Contact | Alak City">
-  <section class="page-section">
-    <h1>Contact Us</h1>
-    <p>Get in touch with us for bookings and inquiries.</p>
-  </section>
-</Layout>
+  <Hero />
+  <Forms />
 
-<style>
-  .page-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 4rem 1.5rem;
-  }
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-</style>
+</Layout>

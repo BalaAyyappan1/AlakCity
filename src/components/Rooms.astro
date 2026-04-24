@@ -1,0 +1,96 @@
+---
+import { Image } from 'astro:assets';
+import Container from './Container.astro';
+
+// You can add as many rooms as you want here
+const rooms = [
+  {
+    title: "Deluxe Room",
+    subtitle: "Preferred Selection",
+    name: "The Quiet Luxury",
+    desc: "Elevated on the upper levels, the Deluxe Room features floor-to-ceiling glass, framing the city skyline as a living canvas. Experience acoustic perfection and curated amenities.",
+    price: "₹2250",
+    quote: "A spatial dialogue between modern heritage and future tranquility.",
+    image: null, // Replace with your image import
+  },
+  {
+    title: "Junior Suite",
+    subtitle: "Limited Edition",
+    name: "City Canvas",
+    desc: "Executive-style suite, the room of the new archiopatric views and curated spaces, making shared experiences and curatorial perfection.",
+    price: "₹3800",
+    quote: "Architecture as a canvas for shared experiences.",
+    image: null,
+  },
+  {
+    title: "Premier Studio",
+    subtitle: "Urban Oasis",
+    name: "Botanical Rest",
+    desc: "Premier Studio minimalist studies, minimizing scoring, and created design and biophilic design with soundproofing and enconracs in a private balcony.",
+    price: "₹2900",
+    quote: "Restoration is not passive; it is a designed encounter.",
+    image: null,
+  }
+];
+---
+<section class="md:mt-40 mt-20 mb-20">
+  <Container>
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-10">
+      <h2 class="text-3xl sm:text-4xl md:text-7xl font-serif text-emerald-950 max-w-lg leading-[100%]">
+        The Sanctuary of Rest
+      </h2>
+      <p class="text-emerald-900/80 max-w-md text-base sm:text-lg leading-relaxed md:pt-2">
+Designed with an uncompromising focus on the quality
+of light and the absence of noise. Every room at ALAK
+CITY is a curated retreat.
+      </p>
+    </div>
+  </Container>
+</section>
+
+
+<section class="py-24 bg-[#fcfaf5] text-[#0b2923]">
+  <Container>
+    <div class="md:space-y-40">
+      {rooms.map((room, index) => (
+        <div class={`flex flex-col gap-12 items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+          
+          <div class="w-full md:w-1/2 space-y-6">
+            <p class="text-xs uppercase tracking-[0.2em] text-[#8ea6a1] font-medium italic">
+              {room.subtitle}
+            </p>
+            <h2 class="text-4xl md:text-5xl font-serif leading-tight">
+              {room.title}:<br />
+              <span class="italic font-light">{room.name}</span>
+            </h2>
+            <p class="text-[#0b2923]/80 leading-relaxed max-w-md">
+              {room.desc}
+            </p>
+            <div class="pt-4">
+              <p class="text-2xl font-serif mb-6">{room.price} <span class="text-sm font-sans text-gray-500">PER NIGHT</span></p>
+              <button class="bg-[#0b2923] text-white px-8 py-4 uppercase tracking-[0.2em] text-xs font-bold hover:bg-[#1a4a40] transition-colors">
+                Reserve your stay
+              </button>
+            </div>
+          </div>
+
+          <div class="w-full md:w-1/2 relative">
+            <div class="aspect-[4/3] w-full bg-gray-200 overflow-hidden">
+               {/* Replace this div with your <Image /> component */}
+               <div class="w-full h-full bg-slate-300 flex items-center justify-center text-slate-500">
+                 Image Placeholder
+               </div>
+            </div>
+            
+            <div class="absolute -bottom-6 -left-6 md:-left-10 md:bottom-10 bg-[#4a3f2b] p-8 max-w-[280px] shadow-xl">
+              <p class="text-white font-serif italic text-sm leading-relaxed">
+                "{room.quote}"
+              </p>
+            </div>
+          </div>
+
+        </div>
+      ))}
+    </div>
+  </Container>
+</section>
